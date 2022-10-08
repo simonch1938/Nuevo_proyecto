@@ -11,11 +11,11 @@
       <ul class="m-0">
         {% if g.user %}
           <li><span>{{ g.user['username'] }}</span>
-          <li><a href="{{ url_for('auth.logout') }}">Logout</a>
+          <li><a href="{{ url_for('auth.logout') }}">Cerrar sesion</a>
         {% else %}
-          <li><a href="{{ url_for('auth.register') }}">Register</a>
-          <li><a href="{{ url_for('auth.login') }}">Login</a>
-          <li><a href="{{ url_for('auth.forgot') }}">Forgot your password?</a>
+          <li><a href="{{ url_for('auth.register') }}">Registrarse</a>
+          <li><a href="{{ url_for('auth.login') }}">Iniciar sesion</a>
+          <li><a href="{{ url_for('auth.forgot') }}">¿Olvido su contraseña?</a>
         {% endif %}
       </ul>
     </nav>

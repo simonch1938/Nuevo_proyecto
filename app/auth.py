@@ -70,7 +70,7 @@ def register():
                 return render_template('auth/register.html')
 
             if db.execute("select id from user where username=?", (username,)).fetchone() is not None:
-                error = 'El usuarui {} Ya está registrado.'.format(username)
+                error = 'El usuario {} Ya está registrado.'.format(username)
                 flash(error)
                 return render_template('auth/register.html')
 
@@ -213,7 +213,7 @@ def forgot():
             email = request.form["email"]
 
             if (not email or (not utils.isEmailValid(email))):
-                error = 'Email Address Invalid'
+                error = 'Correo invalido'
                 flash(error)
                 return render_template('auth/forgot.html')
 
@@ -249,7 +249,7 @@ def forgot():
 
                 flash('Por favor revise en su correo registrado')
             else:
-                error = 'ESe correo no está registrado'
+                error = 'Este correo no está registrado'
                 flash(error)
 
         return render_template('auth/forgot.html')
