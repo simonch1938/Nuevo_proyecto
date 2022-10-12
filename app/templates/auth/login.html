@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-  <form method="post" action="{{ url_for('auth.login')}}" class="px-4">
+  <form method="post" action="{{ url_for('auth.login')}}" class="px-4" autocomplete="off">
     <label for="username">Usuario</label>
     <input type="text" name="username" id="username" class="rounded-md mb-2" required>
     <label for="password">Contraseña</label>
